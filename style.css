@@ -1,0 +1,215 @@
+/* style.css */
+
+/* -------------------------------------- */
+/* -- CSS Global Styles ----------------- */
+/* -------------------------------------- */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdf6f0;
+    /* Warna yang lebih konsisten, menggunakan opacity penuh */
+    color: #673820; 
+}
+
+/* -------------------------------------- */
+/* -- Header & Navigation Styles -------- */
+/* -------------------------------------- */
+
+header {
+    background-color: #452b1e;/* Hapus 'ff' yang redundant */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 4px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    /* Menghapus 'height: 50px;' dan 'width: 33px;' yang ditimpa oleh 'height: auto;' */
+    width: 33px; 
+    height: auto;
+    margin-left: 10px;
+    margin-top: 2px;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.namacoffe {
+    font-size: 10px;
+    color: #fff;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+nav ul li a,
+nav ul li button {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    /* Menambahkan transisi untuk efek hover yang halus */
+    transition: background-color 0.3s ease; 
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+    background-color: #6f4e37;
+    border-radius: 5px;
+}
+
+/* -------------------------------------- */
+/* -- Section & Content Styles ---------- */
+/* -------------------------------------- */
+
+section {
+    text-align: center;
+    /* Menambahkan padding dasar untuk konten section */
+    padding: 20px 10px; 
+}
+
+/* Mengelompokkan style gambar yang serupa */
+.fotocofffeshop,
+.barcoffe,
+.tempatduduk {
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.fotocofffeshop {
+    width: 20%;
+    /* margin-left: tidak diperlukan jika sudah di tengah */
+}
+
+.barcoffe {
+    width: 30%;
+    margin-left: 20px;
+}
+
+.tempatduduk {
+    width: 20%;
+    margin-left: 20px;
+}
+
+/* -------------------------------------- */
+/* -- Menu Styles ----------------------- */
+/* -------------------------------------- */
+
+.menu-grid {
+    display: grid;
+    /* Menambahkan padding horizontal agar grid tidak terlalu menempel di tepi */
+    padding: 0 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #d8c3a5;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Efek visual saat di-hover */
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    /* Memastikan gambar memiliki aspek rasio yang baik */
+    max-height: 200px; 
+    object-fit: cover;
+}
+
+.detail {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.menu-item button {
+    margin-top: 10px;
+    background-color: #6f4e37;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item button:hover {
+    background-color: #3e2c23;
+}
+
+.hidden {
+    display: none;
+}
+
+/* -------------------------------------- */
+/* -- Footer Styles --------------------- */
+/* -------------------------------------- */
+
+footer {
+    background-color: #3e2c23;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px; /* Jarak dari konten atas */
+}
+
+/* -------------------------------------- */
+/* -- CSS Responsive Styles ------------- */
+/* -------------------------------------- */
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5px; /* Padding yang lebih besar di perangkat mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li a,
+    nav ul li button {
+        font-size: 18px; /* Ukuran font lebih kecil di mobile */
+    }
+
+    .menu-grid {
+        padding: 0 10px;
+        grid-template-columns: 1fr;
+    }
+
+    /* Mengubah ukuran gambar di bagian section untuk mobile */
+    .fotocofffeshop,
+    .barcoffe,
+    .tempatduduk {
+        width: 80%; /* Lebar gambar lebih besar */
+        margin-left: 0; /* Hapus margin agar di tengah */
+        display: block; /* Agar setiap gambar berada di baris baru */
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+}

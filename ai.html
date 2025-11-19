@@ -1,0 +1,76 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kedai Kopi Modern</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- -- HTML Structure: Header/Nav -- -->
+  <header>
+    <img class="logo" src="logocoffe.jpg" alt="Logo Kedai Kopi">
+    <h3 class="namacoffe">Dibalik Tirai</h3>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><button id="orderBtn">Pesan Sekarang</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- -- HTML Structure: Section Beranda -- -->
+    <section id="beranda">
+      <h1>Selamat Datang di Kedai Kopi Modern</h1>
+      <img class="fotocofffeshop" src="fotocofffeshop.jpeg" alt="Kedai Tampak Depan">
+      <img class="barcoffe" src="bar.jpeg" alt="Kedai Tampak Depan">
+      <img class="tempatduduk" src="tempatduduk.jpeg" alt="Kedai Tampak Depan">
+      <p>Nikmati kopi terbaik dengan suasana nyaman dan hangat.</p>
+    </section>
+
+    <!-- -- HTML Structure: Section Menu -- -->
+    <section id="menu">
+      <h2>Menu Kami</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img src="placeholder-kopi.jpg" alt="Kopi Unggulan">
+          <h3>Espresso - Rp25.000</h3>
+          <button class="toggleDetail">Detail</button>
+          <p class="detail hidden">Espresso pekat dengan aroma khas biji kopi pilihan.</p>
+        </div>
+        <div class="menu-item">
+          <img src="placeholder-makanan.jpg" alt="Makanan Pendamping">
+          <h3>Croissant - Rp20.000</h3>
+          <button class="toggleDetail">Detail</button>
+          <p class="detail hidden">Croissant hangat, cocok untuk teman ngopi.</p>
+        </div>
+        <!-- Tambahkan item menu lainnya di sini -->
+      </div>
+    </section>
+
+    <!-- -- HTML Structure: Section Tentang Kami/Lokasi -- -->
+    <section id="tentang">
+      <h2>Tentang Kami</h2>
+      <p>Kedai Kopi Modern berdiri sejak 2020, menyajikan kopi berkualitas dan pelayanan ramah.</p>
+      <img src="placeholder-peta.jpg" alt="Peta Lokasi">
+      <aside>
+        <h3>Lokasi & Jam Buka</h3>
+        <p>Jl. Kopi No. 10, Jakarta Timur</p>
+        <p>Senin - Minggu: 08.00 - 22.00</p>
+      </aside>
+    </section>
+  </main>
+
+  <!-- -- HTML Structure: Footer -- -->
+  <footer>
+    <p>&copy; 2025 Kedai Kopi Modern. Semua hak dilindungi.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
